@@ -1,10 +1,5 @@
 import { CartListState } from "../interfaces/DataModule";
 
-export interface ICartAction {
-  type: "ADD_PRODUCT_CART" | "ADD_PRODUCT_CART" | "INCREASE_DECREASE";
-  payLoad: CartListState;
-}
-
 //Store
 export const initialState: CartListState = {
   cart: [
@@ -24,7 +19,7 @@ export function cartReducer(state: CartListState, action: any) {
       // console.log(action);
       //Add item
       let cartUpdate = [...state.cart];
-      console.log(cartUpdate);
+      // console.log(cartUpdate);
       const index = cartUpdate.findIndex(
         (item) => item.maSP === action.itemCart.maSP
       );

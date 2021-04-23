@@ -1,16 +1,13 @@
-import React, { useReducer } from "react";
-import { cartReducer, initialState } from "../reducers/reducer";
+import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import ProductList from "./ProductList";
 import Slider from "./Slider";
 
 const Shop: React.FC = () => {
-  const [cartState] = useReducer(cartReducer, initialState);
-
   return (
     <div>
-      <Header cartState={cartState.cart} />
+      <Header />
       <Slider />
       <ProductList />
       <Footer />

@@ -35,14 +35,14 @@ const ProductList: React.FC = () => {
       soLuong: 1,
     };
 
-    console.log(itemCart);
+    // console.log(itemCart);
     const action = {
       type: "ADD_PRODUCT_CART",
       itemCart: itemCart,
     };
     dispatch(action);
   };
-  const deleteItemInCart = (index: any) => {
+  const deleteItemInCart = (index: number) => {
     const action = {
       type: "DELETE_PRODUCT_CART",
       index,
