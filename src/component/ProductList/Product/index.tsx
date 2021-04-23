@@ -14,8 +14,12 @@ const Product: React.FC<any> = (props) => {
       <div className="card-body text-center">
         <h4 className="card-title text-center">{phone.tenSP}</h4>
         <h6 className="card-title text-center text-danger">
-          {phone.giaBan.toLocaleString()}
+          {phone.giaBan.toLocaleString("vi", {
+            style: "currency",
+            currency: "VND",
+          })}
         </h6>
+
         <p className="card-text text-truncate">{phone.noiDung}</p>
         <button
           className="btn btn-primary mr-2"

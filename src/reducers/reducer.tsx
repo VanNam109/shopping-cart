@@ -31,7 +31,7 @@ export function cartReducer(state: CartListState, action: any) {
         const cartUpdateItem = {
           ...cartUpdate[index],
         };
-        cartUpdateItem.soLuong++;
+        cartUpdateItem.soLuong += 1;
         cartUpdate[index] = cartUpdateItem;
       }
       return { ...state, cart: cartUpdate };
