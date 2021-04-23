@@ -77,7 +77,7 @@ const ProductModel: React.FC<any> = (props) => {
           <div className="modal-footer">
             <button
               type="button"
-              className="btn btn-danger"
+              className="btn btn-light"
               data-dismiss="modal"
             >
               Đóng
