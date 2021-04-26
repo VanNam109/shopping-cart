@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./App.css";
-import Shop from "./component";
+import Shop from "./containers";
 
 function App() {
   return (

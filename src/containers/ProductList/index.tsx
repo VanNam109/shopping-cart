@@ -2,7 +2,7 @@ import { TablePagination } from "@material-ui/core";
 import React, { useEffect, useReducer, useState } from "react";
 import { ProductState } from "../../interfaces/DataModule";
 import { cartReducer, initialState } from "../../reducers/reducer";
-import { AdminService } from "../../services/ApiManagement";
+import { AdminService } from "../../services/ProductManagementApi";
 import CardModal from "./CardModal";
 import Product from "./Product";
 import ProductModel from "./ProductModal";

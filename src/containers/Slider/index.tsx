@@ -48,4 +48,4 @@ const Slider: React.FC = () => {
     </div>
   );
 };
-export default Slider;
+export default React.memo(Slider);

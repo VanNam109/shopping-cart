@@ -24,11 +24,11 @@ const Header: React.FC<any> = (props) => {
                   Trang chủ
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a href="#" className="nav-link">
-                  Tin tức công nghệ
+                  Review Sản Phẩm
                 </a>
-              </li>
+              </li> */}
               <li className="nav-item dropdown">
                 <a href="#" className="nav-link" data-toggle="dropdown">
                   Sản phẩm
