@@ -2,10 +2,11 @@ import axios from "axios";
 import { domain } from "../config/config";
 
 export class ApiManagement {
-  //Get load data
+  //Get load data\
+  //Add domain
   listPhone = () => {
     return axios({
-      url: `${domain}moti-shop`,
+      url: `${domain}phone`,
       method: "GET",
     });
   };
