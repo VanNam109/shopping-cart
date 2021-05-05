@@ -1,0 +1,125 @@
+.filter {
+    padding: 10px 0;
+    background-color: #fff;
+}
+.filter .manu {
+    padding: 0 0 11px 1px;
+    overflow: hidden;
+}
+.manu a {
+    float: left;
+    width: 12.41%;
+    border: 1px solid #eee;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    margin: 0 0 -1px -1px;
+    color: #288ad6;
+    text-align: center;
+}
+.filter .manu a img {
+    max-height: 70%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.news .nav {
+    display: flex;
+    justify-content: center;
+}
+.news .nav .nav-link {
+    font-size: 20px;
+    font-weight: normal;
+    color: #000;
+    border: none;
+    padding: 0;
+    margin: 40px 30px;
+    transition: all 0.3s;
+}
+.news .nav .nav-link:hover {
+    border: none;
+    transform: scale(1.3);
+    margin: 40px;
+}
+.news .nav .nav-link.active {
+    border: none;
+    font-size: 20px;
+    font-weight: normal;
+    color: #fb4226;
+}
+.nav-link.active :hover {
+    cursor: default;
+    margin: 40px 30px;
+}
+.news .nav-tabs {
+    border: none;
+}
+.news .tab-content .news__img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.span__icon {
+    margin: 10px;
+}
+.news__largeItem {
+    padding: 0 7.5px;
+    margin-bottom: 20px;
+}
+
+.news__mediumItem {
+    padding: 0 7.5px;
+    margin-bottom: 20px;
+}
+.news__smallItemContainer {
+    padding: 0px 7.5px;
+}
+.news__smallItem {
+    margin-bottom: 10px;
+    display: flex;
+}
+.news__smallItem img {
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+.news__smallItem .link_detail:last-of-type {
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+.news__smallItem .link_detail:last-of-type :hover {
+    color: #fb4226;
+}
+.news .a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 7px;
+    text-decoration: none;
+    height: 3em;
+    display: inline-block;
+    transition: all 0.3s;
+}
+.news .a :hover {
+    color: #fb4226;
+}
+.new p:first-of-type {
+    height: 55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    text-align: justify;
+    margin-bottom: 15px;
+}
