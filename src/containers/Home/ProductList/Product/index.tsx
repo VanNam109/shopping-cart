@@ -1,8 +1,7 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import React from "react";
 
+import React from "react";
 const Product: React.FC<any> = (props) => {
-  let { viewDetail, phone, addItemInCart } = props;
+  const { viewDetail, phone, addItemInCart } = props;
   return (
     <div className="card bg-light mb-2" style={{ width: 300 }}>
       <img

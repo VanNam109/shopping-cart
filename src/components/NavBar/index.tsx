@@ -1,13 +1,13 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-const Header: React.FC<any> = (props) => {
+import { NavLink } from "react-router-dom";
+const Navbar: React.FC = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container-fluid">
-          <a href="#" className="navbar-brand">
+          <a href="/" className="navbar-brand">
             Moti-Shop
           </a>
           <button
@@ -20,36 +20,38 @@ const Header: React.FC<any> = (props) => {
           <div className="collapse navbar-collapse" id="myMenu">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a href="#" className="nav-link active">
+                <NavLink
+                  exact
+                  activeClassName="active"
+                  className="nav-link"
+                  to="/"
+                >
                   Trang chủ
-                </a>
+                </NavLink>
+              </li>            
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  activeClassName="active"
+                  className="nav-link"
+                  to="/categoryall"
+                >
+                  Điện thoại
+                </NavLink>
+              </li>    
+              <li className="nav-item">
+                <NavLink exact className="nav-link" to="/tintuc">
+                  Tin tức
+                </NavLink>
               </li>
               {/* <li className="nav-item">
-                <a href="#" className="nav-link">
-                  Review Sản Phẩm
-                </a>
-              </li> */}
-              <li className="nav-item dropdown">
-                <a href="#" className="nav-link" data-toggle="dropdown">
-                  Sản phẩm
-                </a>
-                <div className="dropdown-menu">
-                  <a href="#" className="dropdown-item">
-                    Điện thoại
-                  </a>
-                  <a href="#" className="dropdown-item">
-                    Laptop
-                  </a>
-                </div>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
+                <a href="./#" className="nav-link">
                   Forum
                 </a>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <a
-                  href="#"
+                  href="./#"
                   className="nav-link"
                   data-toggle="modal"
                   data-target="#modelCart"
@@ -69,4 +71,4 @@ const Header: React.FC<any> = (props) => {
     </div>
   );
 };
-export default Header;
+export default Navbar;

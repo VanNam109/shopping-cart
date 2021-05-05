@@ -9,6 +9,13 @@ export class ApiManagement {
       method: "GET",
     });
   };
+  //Detail phone
+  detailPhone = (hangSX: string) => {
+    return axios({
+      url: `${domain}phone?hangSX=${hangSX}`  ,
+      method: "GET",
+    });
+  };
 }
 
 export const AdminService = new ApiManagement();

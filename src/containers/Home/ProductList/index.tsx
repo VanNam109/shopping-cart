@@ -1,8 +1,8 @@
-import { TablePagination } from "@material-ui/core";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useReducer, useState } from "react";
-import { ProductState } from "../../interfaces/DataModule";
-import { cartReducer, initialState } from "../../reducers/reducer";
-import { AdminService } from "../../services/ProductManagementApi";
+import { ProductState } from "../../../interfaces/DataModule";
+import { cartReducer, initialState } from "../../../reducers/reducer";
+import { AdminService } from "../../../services/ProductManagementApi";
 import CardModal from "./CardModal";
 import Product from "./Product";
 import ProductModel from "./ProductModal";
@@ -59,50 +59,22 @@ const ProductList: React.FC = () => {
     };
     dispatch(action);
   };
-  //
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(4);
-
-  const handleChangePage = (
-    event: React.MouseEvent<HTMLButtonElement> | null,
-    newPage: number
-  ) => {
-    setPage(newPage);
-  };
-  const handleChangeRowsPerPage = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
   return (
     <div className="container-fluid">
       <h3 className="display-4 text-center"> SMART PHONE</h3>
       <div className="row">
-        {phoneState
-          ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-          .map((phone: Object, index: number) => {
-            return (
-              <div className="col-12 col-md-6 col-lg-3" key={index}>
-                <Product
-                  phone={phone}
-                  viewDetail={viewDetail}
-                  addItemInCart={addItemInCart}
-                />
-              </div>
-            );
-          })}
+        {phoneState?.map((phone: any, index: number) => {
+          return (
+            <div className="col-12 col-md-6 col-lg-3" key={index}>
+              <Product
+                phone={phone}
+                viewDetail={viewDetail}
+                addItemInCart={addItemInCart}
+              />
+            </div>
+          );
+        })}
       </div>
-      <TablePagination
-        labelRowsPerPage={"Số lượng cần hiển thị"}
-        rowsPerPageOptions={[2, 5, 10, 15, 20]}
-        component="div"
-        count={20}
-        page={page}
-        onChangePage={handleChangePage}
-        rowsPerPage={rowsPerPage}
-        onChangeRowsPerPage={handleChangeRowsPerPage}
-      />
       <ProductModel phoneModal={phoneModalState} />
       <CardModal
         cart={cardState}

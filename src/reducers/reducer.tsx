@@ -18,7 +18,7 @@ export function cartReducer(state: CartListState, action: any) {
     case "ADD_PRODUCT_CART": {
       // console.log(action);
       //Add item
-      let cartUpdate = [...state.cart];
+      const cartUpdate = [...state.cart];
       // console.log(cartUpdate);
       const index = cartUpdate.findIndex(
         (item) => item.maSP === action.itemCart.maSP
@@ -37,8 +37,8 @@ export function cartReducer(state: CartListState, action: any) {
       return { ...state, cart: cartUpdate };
     }
     case "DELETE_PRODUCT_CART": {
-      let cartUpdate = [...state.cart];
-      let index = cartUpdate.findIndex((item) => item.maSP === action.index);
+      const cartUpdate = [...state.cart];
+      const index = cartUpdate.findIndex((item) => item.maSP === action.index);
 
       if (index !== -1) {
         cartUpdate.splice(index, 1);
@@ -48,7 +48,7 @@ export function cartReducer(state: CartListState, action: any) {
     }
     case "INCREASE_DECREASE": {
       const { index, increaseOrDecrease } = action;
-      let cartUpdate = [...state.cart];
+      const cartUpdate = [...state.cart];
       if (increaseOrDecrease) {
         const cartUpdateItem = {
           ...cartUpdate[index],

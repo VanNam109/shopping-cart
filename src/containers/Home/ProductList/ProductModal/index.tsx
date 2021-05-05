@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { ProductState } from "../../../interfaces/DataModule";
+import { ProductState } from "../../../../interfaces/DataModule";
 
 const ProductModel: React.FC<any> = (props) => {
-  let { phoneModal } = props;
+  const { phoneModal } = props;
   const [state, setstate] = useState<ProductState>();
   useEffect(() => {
     setstate(phoneModal);

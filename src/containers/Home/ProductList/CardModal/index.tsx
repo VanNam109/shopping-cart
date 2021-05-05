@@ -1,8 +1,9 @@
+
 import React from "react";
 import Swal from "sweetalert2";
 
 const CardModal: React.FC<any> = (props) => {
-  let { cart, deleteItemInCart, increaseOrDecrease } = props;
+  const { cart, deleteItemInCart, increaseOrDecrease } = props;
   //Swaf popup
   const submitCart = (cartNew: any): void => {
     for (const key in cartNew) {
@@ -131,7 +132,7 @@ const CardModal: React.FC<any> = (props) => {
                     <td colSpan={5}>Tổng tiền</td>
                     <td>
                       {cart.cart
-                        .reduce((total: any, itemCart: any, index: number) => {
+                        .reduce((total: any, itemCart: any) => {
                           return (total = itemCart.soLuong * itemCart.giaBan);
                         }, 0)
                         .toLocaleString()}
